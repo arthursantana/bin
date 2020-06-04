@@ -1,0 +1,1 @@
+pacmd set-card-profile 7 a2dp_sink

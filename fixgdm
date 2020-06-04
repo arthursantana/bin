@@ -1,0 +1,2 @@
+systemctl start user@120.service
+systemctl restart gdm
