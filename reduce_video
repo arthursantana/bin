@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# 4 => 1/2 size
+# 2n => 1/n size
+N=4
+ffmpeg -i $1 -vf "scale=trunc(iw/$N)*2:trunc(ih/$N)*2" -c:v libx265 -crf 28 $2

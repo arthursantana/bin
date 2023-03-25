@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+killall -USR1 termite

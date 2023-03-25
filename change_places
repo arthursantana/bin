@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [ $1 == "-f" ]; then
+    bspc desktop -f DP-0:^$2
+    bspc desktop -f HDMI-0:^$2
+elif [ $1 == "-d" ]; then
+    bspc node -d focused:^$2 --follow
+fi

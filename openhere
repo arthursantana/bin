@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+ID=$(xdpyinfo | grep focus | cut -f4 -d " ")
+#echo ID = $ID
+MAGICAL_NUMBER=5 # don't ask me why
+PID=$(($(xprop -id $ID | grep -m 1 PID | cut -d " " -f 3) + $MAGICAL_NUMBER))
+#echo PID = $PID
+if [ -e "/proc/$PID/cwd" ]
+then
+    #echo $(readlink /proc/$PID/cwd)
+    termite -d $(readlink /proc/$PID/cwd) &
+else
+    termite
+fi

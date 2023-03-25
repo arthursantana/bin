@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+bspc desktop -f $1;
+if [ `ps xua | grep "$2" | wc -l` -le 3 ]; then
+    $2;
+fi

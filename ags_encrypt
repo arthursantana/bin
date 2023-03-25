@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+D=/home/arthur/cloud_backups
+
+tar czv $1 | gpg --symmetric --cipher-algo aes256 -o $D/$1.tar.gz.gpg.part
+mv $D/$1.tar.gz.gpg.part  $D/$1.tar.gz.gpg

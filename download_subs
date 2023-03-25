@@ -1,0 +1,4 @@
+IFS=$'\n'; for i in $(ls); do cd $i; subdl --lang='eng' --download=best-rating --existing=bypass *.$1; cd ..; done
+IFS=$'\n'; for i in $(ls); do cd $i; subdl --lang='spa' --download=best-rating --existing=bypass *.$1; cd ..; done
+IFS=$'\n'; for i in $(ls); do cd $i; subdl --lang='por' --download=best-rating --existing=bypass *.$1; cd ..; done
+IFS=$'\n'; for i in $(ls); do cd $i; subdl --lang='fre' --download=best-rating --existing=bypass *.$1; cd ..; done
